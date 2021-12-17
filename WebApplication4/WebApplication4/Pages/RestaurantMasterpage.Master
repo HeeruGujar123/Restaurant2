@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RestaurantMasterpage.master.cs" Inherits="WebApplication4.Pages.RestaurantMasterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/atlantis.css">
+    <link rel="stylesheet" href="../assets/css/demo.css">
+    <link href="../assets/css/fonts.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+.bg-primary-gradient {
+background: #0d4ea0 !important;
+background: -webkit-linear-gradient(legacy-direction(-45deg), #06418E, #0d4ea0) !important;
+background: linear-gradient(-45deg, #05254e, #3163a2) !important;
+}
+
+
+
+.main-header {
+background: #072244 !important;
+}
+
+
+
+<style > .body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+
+
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+
+
+.topnav a.active {
+background-color: #04AA6D;
+color: white;
+}
+
+</style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+<div class="main-header">
+<!-- Logo Header -->
+
+
+
+<!-- End Logo Header -->
+
+
+
+<!-- Navbar Header -->
+<div class="topnav">
+<a class="active" href="ProductRegistration.aspx">Product Master</a>
+<a href="Dashboard.aspx">Dashboard</a>
+<a href="Billing.aspx">Billing</a>
+<a href="/Restaurant login page.aspx">log out</a>
+</div>
+
+
+
+
+</div>
+            <div>
+<div class="container">
+<asp:ContentPlaceHolder ID="ContentBody" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+
+
+
+</div>
+</div>
+<asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+</asp:ContentPlaceHolder>
+
+
+
+<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="../assets/js/core/bootstrap.min.js"></script>
+
+
+
+<!-- jQuery Scrollbar -->
+<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<!-- Chart Circle -->
+<script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+<!-- Datatables -->
+<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+<!-- Select2 -->
+<script src="../assets/js/plugin/select2/select2.full.min.js"></script>
+<!-- Atlantis JS -->
+<script src="../assets/js/atlantis.min.js"></script>
+<script src="../assets/js/Script.js"></script>
+
+
+
+<script>
+
+
+
+    function formatDate(date) {
+        var newdate = date.split("-").reverse().join("-");
+        var d = new Date(newdate),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+
+
+        return [year, month, day].join('-');
+    }
+</script>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+
+

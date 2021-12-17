@@ -1,0 +1,48 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ms.master.cs" Inherits="WebApplication4.ms" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/atlantis.css">
+    <link rel="stylesheet" href="../assets/css/demo.css">
+    <link href="../assets/css/fonts.min.css" rel="stylesheet" /> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .div{
+            
+            text-align:center;
+            border: 2px solid black;
+            color:black;
+
+        }
+        h1, .h1{
+            text-align:center;
+            border: 2px solid black;
+            background-color:lightblue;
+            margin-top:20px;
+            height:100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        <div  class =".div">
+            <h1>Master page</h1>
+        </div>
+                 </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
